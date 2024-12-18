@@ -8,7 +8,8 @@ interface Iproducts{
     id:number
     rating?:string;
     old_price?:string;
-    img_url:string
+    img_url:string;
+    
 }
 
 let product:Iproducts[]= [{
@@ -16,7 +17,9 @@ let product:Iproducts[]= [{
     id:1,
     price:"$212",
     old_price:"$232",
-    img_url:"/product7.png"},   
+    img_url:"/product7.png"
+}, 
+
 {
     title:"COURAGE GRAPHIC T-SHIRT",
     id:2,
@@ -34,12 +37,12 @@ let product:Iproducts[]= [{
     
     img_url:"/product10.png"},   
     ]
-let star=[<FaStar/>,<FaStar/>,<FaStar/>,<FaStar/>,]
+{/*let star=[<FaStar/>,<FaStar/>,<FaStar/>,<FaStar/>,]*/}
 
 
 
 
-export default function Top_sell(){
+export default function Top_Sell(){
     return(
         <div className="w-full h-[500px]">
             <h1 className="text-3xl md:text-4xl font-bold text-center mt-10">TOP SELLING</h1>
@@ -59,9 +62,9 @@ export default function Top_sell(){
                                 
 
                                 <div>
-                                <p className="text-lg  font-bold">{data.title}</p>
-                                <p className="flex text-yellow-300 mt-3">{star}</p>
-                                <p className="mt-3 font-bold">{data.price} <span className="text-gray-400 font-bold px-2 line-through">{data.old_price}</span></p>
+                                <p  className="text-lg  font-bold">{data.title}</p>
+                                <p  className="flex text-yellow-300 mt-3"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></p>
+                                <p  className="mt-3 font-bold">{data.price} <span className="text-gray-400 font-bold px-2 line-through">{data.old_price}</span></p>
                                 </div>
                             </div>
                         )
